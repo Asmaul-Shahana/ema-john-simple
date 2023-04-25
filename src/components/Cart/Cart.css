@@ -1,10 +1,16 @@
-.cart{
+.cart {
     background-color: #FFE0B3;
-    padding: 25px;
+    padding: 15px;
     position: sticky;
-    top: 0;    
+    top: 0;
 }
 
-.cart h4{
+.cart h4 {
     margin: 0;
+}
+
+.clear-cart {
+    background-color: #FF3030;
+    width: 100%;
+    border-radius: 4px;
 }

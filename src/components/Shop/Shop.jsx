@@ -13,9 +13,29 @@ const Shop = () => {
     const [cart, setCart] = useState([]);
 
     const handleAddToCart = (product) => {
-       const newCart = [...cart, product];
-       setCart(newCart);
-       addToDb(product.id);
+    // ====== Easy solution: If u use this then give the condition of if in cart.jsx
+    //    const newCart = [...cart, product];
+    //    setCart(newCart);
+    //    addToDb(product.id);
+
+
+
+    // ====== Harder approach: If u use this then comment the if condition in cart.jsx for checking product.quanntity === 0
+        let newCart = [];
+        // if product doesn't exist in the cart, then set quantity = 1
+        // if exists update quantity by 1
+        const exists = cart.find(pd => pd.id === product.id);
+        if(!exists){
+            product.quantity = 1;
+            newCart = [...cart, product];
+        }
+        else{
+            exists.quantity = exists.quantity + 1;
+            const remaining = cart.filter(pd => pd.id!== product.id);
+            newCart = [...remaining, exists];
+        }
+        setCart(newCart);
+        addToDb(product.id);
     }
 
     useEffect(() => {
