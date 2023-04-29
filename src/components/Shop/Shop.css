@@ -10,3 +10,19 @@
     gap: 45px;
     margin: 120px 80px 0 120px;
 }
+.btn-proceed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF9900;
+    width: 90%;
+    height: 56px;
+    margin: 10px auto;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+.proceed-link{
+    text-decoration: none;
+}
+

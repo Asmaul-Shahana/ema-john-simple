@@ -9,8 +9,15 @@
     margin: 0;
 }
 
-.clear-cart {
+.btn-clear-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #FF3030;
-    width: 100%;
+    width: 90%;
+    height: 56px;
+    margin: 10px auto;
     border-radius: 4px;
+    color: white;
+    font-size: 16px;
 }
